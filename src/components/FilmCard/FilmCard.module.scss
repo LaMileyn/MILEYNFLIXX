@@ -1,0 +1,47 @@
+
+.film-card.active-card{
+  border: 2px solid var(--color-text-primary);
+  border-radius: var(--border-raduis-buttons);
+  position: relative;
+}
+.film-card {
+  width: 100%;
+  height: 100%;
+  .film-card__meta {
+    position: absolute;
+    top: 15px;
+    left: 1rem;
+    font-size: 24px;
+    display: flex;
+    gap: 1rem;
+
+    // grage
+    .meta__grade {
+      color: white;
+      background-color: #474545;
+      padding: 5px 14px;
+      border-radius: var(--border-raduis-buttons);
+    }
+
+    //price
+    .meta__price {
+      color: white;
+      background-color: var(--color-red);
+      padding: 5px 14px;
+      border-radius: var(--borderRaduisButtons);
+    }
+
+  }
+
+  /// image
+  .film-card__image {
+    width: 100%;
+    height: 100%;
+    img{
+    border-radius: var(--border-raduis-buttons);
+
+    }
+  }
+
+}
+

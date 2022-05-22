@@ -1,0 +1,76 @@
+
+// price
+.price{
+  color: var(--color-red);
+  font-size: 55px;
+  font-weight: 600;
+
+}
+
+.buttons-actions {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  // left part buttons
+  .buttons-actions__left-part {
+    display: flex;
+    gap: 1rem;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: 18px;
+      cursor: pointer;
+      transition: all 200ms;
+      border-radius: var(--border-raduis-buttons);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .btn__wrapper {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    //  current buttons
+    .btn__buy-and-watch {
+      background-color: var(--color-red);
+      color: white;
+      font-size: 20px;
+    }
+
+    .btn__about-film, .btn__favourite {
+      background-color: var(--color-dark-grey);
+      color: white;
+      font-size: 20px;
+    }
+
+  }
+
+  //  right part buttons
+  .buttons-actions__right-part{
+    display: flex;
+    gap: 1rem;
+    .btn-big{
+      background-color: var(--color-dark-grey);
+      padding: 15px;
+      border-radius: 50%;
+      transition: all 200ms;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.05);
+      }
+      .btn-big__wrapper{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+}

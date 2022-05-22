@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import {useTypedDispatch, useTypedSelector} from "./redux/store/store";
+import {set} from "./redux/reducers/themeReducer";
+import WelcomePage from "./pages/WelcomePage/WelcomePage";
+import "./styles/main.scss"
+import ShopPage from "./pages/ShopPage/ShopPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const theme = useTypedSelector(state => state.theme);
+    const dispatch = useTypedDispatch()
+
+    useEffect(() => {
+        document.documentElement.dataset.theme = theme
+        localStorage.setItem("theme", theme)
+    }, [theme])
+
+    const handleChangeTheme = () =>{
+        const next = theme === "dark" ? "light" : "dark"
+        dispatch(set(next))
+
+    }
+    // if user hasn`t seen the weclome sreen --> return <Welcome Screen/>
+    // if user is not auth --> login or register screen
+    return (
+        <div className="App">
+            {/*<WelcomePage />*/}
+            <ShopPage />
+        </div>
+    );
 }
 
 export default App;

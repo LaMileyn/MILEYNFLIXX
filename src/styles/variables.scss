@@ -1,0 +1,75 @@
+// App variables //
+
+:root{
+
+  // main colors
+  --color-red: #E50914;
+  --color-grey-middle: #eaeaea;
+  --color-dark-grey: #303030;
+  // container
+  --section-width: 72rem;
+  --section-padding-right-left: 1.8rem;
+  --section-padding-bottom: 6.4rem;
+  --section-container-padding: 6rem;
+
+  //header
+  --header-height: 115px;
+
+
+  // App fonts
+  --font-family-app: 'Roboto', sans-serif;
+
+  // border-radius
+  --border-radius-grid: .8rem;
+  --border-raduis-buttons : 5px;
+
+  // standart transition
+  --transition-standart: all 200ms;
+
+  // logotypes
+  --logotype-Large-Width: 200px;
+  --logotype-large-height: 80px;
+
+
+  --items-padding: 30px;
+  --items-width: 450px;
+  --items-height: 240px;
+
+//  navigation colors
+  --color-navigation-non-active: var(--color-text-secondary);
+  --color-navigation-non-active-hover: rgba(255, 255, 255, 0.86);
+  --color-navigation-active: #FFFFFF;
+  --burder-menu-background: #292929;
+
+}
+
+:root[data-theme="light"] {
+
+  // background App
+  --app-background-color: #FFFFFF;
+  // App text colors light theme
+  --color-text-primary: #000000;
+  --color-text-secondary: var(--color-grey-middle);
+  --color-input-placeholder : var(--color-grey-middle);
+
+  // ------------- header navigation colors
+  --color-user-background: #efefef;
+
+
+
+}
+
+:root[data-theme="dark"] {
+
+  // background App
+  --app-background-color: #141414;
+
+  // App text colors dark theme
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: rgba(229, 229, 229, 0.7);
+  --color-input-placeholder : var(--color-grey-middle);
+  // ------------- header navigation colors
+  --color-user-background: #303030;
+
+}
+

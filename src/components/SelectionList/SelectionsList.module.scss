@@ -1,0 +1,22 @@
+.selection-list {
+  padding-bottom: 15px;
+  overflow: hidden;
+  // headline
+  .selection-list__headline {
+    color: var(--color-text-primary);
+    margin-bottom: 30px;
+    padding: 3rem 0 1rem 6rem;
+  }
+
+  .selection-list__slider {
+    padding-left: 6rem;
+  }
+
+  //DETAIL VIDEO PART
+  .selection-list__detail-video {
+    margin-top: 30px;
+  }
+
+
+
+}

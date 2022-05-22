@@ -1,0 +1,36 @@
+.large-video-section{
+  height: calc(100vh - var(--header-height) - 80px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  background: red;
+
+
+  // video absolute
+  .large-video-section__video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  // content
+  .large-video-section__content{
+    background-color: rgba(0, 0, 0, 0.681);
+    z-index: 2;
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
+    justify-content: start;
+    align-items: end;
+
+    .sections__content-wrapper{
+      padding: 4rem 6rem;
+      width: 100%;
+    }
+  }
+}

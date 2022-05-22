@@ -1,0 +1,79 @@
+.welcome-page {
+
+  //  logotype on the top of the welcome page
+  .welcome-page__logotype {
+    width: 200px;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.25rem;
+  }
+
+  //  header of the welcome page
+  .welcome-page__header {
+    max-width: var(--section-width);
+    padding: 9.6rem var(--section-padding-right-left) 4rem var(--section-padding-right-left);
+    text-align: center;
+    margin: 0 auto;
+
+    //  header h1
+    h1 {
+      color: var(--color-text-primary);
+      margin-bottom: 1.6rem;
+    }
+
+    //  header p
+    p {
+      font-size: 2.2rem;
+      color: var(--color-text-secondary)
+    }
+
+    //  630px screen max width
+    @media only screen and (max-width: 630px) {
+      text-align: left;
+      // h1
+      h1 {
+        font-size: 55px;
+      }
+      //  p
+      p {
+        font-size: 28px;
+      }
+    }
+    //  466px screen max width
+    @media only screen and (max-width: 466px) {
+      // h1
+      h1 {
+        font-size: 42px;
+      }
+      //  p
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+
+  // button перейти к приложению
+  .welcome-page__button-get-started {
+    // обертка
+    width: 100%;
+    text-align: center;
+    margin-top: 76px;
+    margin-bottom: 56px;
+    //  сама кнопка
+    button{
+      color: white;
+      font-size: 19px;
+      background: var(--color-red);
+      width: 537px;
+      height: 58px;
+      cursor: pointer;
+      transition: var(--transition-standart);
+      max-width: 80%;
+      border-radius: var(--border-raduis-buttons);
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,63 @@
+// карточка жанров
+.list__item-card-genres {
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 200ms;
+  width: 250px;
+  height: 125px;
+
+}
+
+// карточка фильма
+.list__item-card-films {
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 200ms;
+  width: 450px;
+  height: 255px;
+  flex-shrink: 0;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+}
+
+.list__item-card-films:first-child, .list__item-card-genres:first-child {
+  margin-left: 0;
+}
+
+//// slider
+
+.slider {
+  position: relative;
+  &:hover > span{
+    opacity: 1;
+  }
+  .slider__list {
+    display: flex;
+    transition: all 200ms linear;
+  }
+
+  & > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-grey-middle);
+    font-size: 45px;
+    opacity: 0;
+    transition: all 200ms;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .left {
+    left: 1rem;
+  }
+
+  .right {
+    right: 1rem;
+  }
+}
