@@ -14,6 +14,20 @@
     z-index: 10;
     background: linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.45) 17%,rgba(0,0,0,.32) 32%,rgba(0,0,0,.2) 48%,rgba(0,0,0,.09) 69.82%,transparent);
   }
+  // content wrapper
+  .content-wrapper{
+    height: 100%;
+    padding: 7.2rem 3.5rem 1.2rem var(--section-container-padding);
+  }
+  //logotype
+  .logotype__wrapper{
+    transition: width .2s ease;
+    transform-origin: top left;
+    width: 500px;
+  }
+   .logotype__wrapper-small{
+     width: 230px;
+  }
 
   //  black part
   .detail-slider__black-part {
@@ -90,5 +104,6 @@
     top: 3.5rem;
     right: 3.5rem;
     cursor: pointer;
+    z-index: 991;
   }
 }

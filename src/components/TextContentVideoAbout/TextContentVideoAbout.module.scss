@@ -1,13 +1,11 @@
 .text-content-wrapper{
-  padding: 7.2rem 3.5rem 1.2rem var(--section-container-padding);
+
   height: 100%;
   color: white;
   position: relative;
 
   // logotype
-  .logotype__wrapper{
-    width: 500px;
-  }
+
 
   /// meta
   .text-content__meta{
@@ -68,12 +66,15 @@
     margin-top: 50px;
     color: white;
     line-height: 30px;
-    font-size: 20px;
+    font-size: 30px;
     max-width: 55%;
-    font-weight: 300;
+    font-weight: 400;
   }
   .text-content__buttons{
-    margin-top: 120px;
+    //margin-top: 210px;
+    position: absolute;
+    bottom: 250px;
+    width: 100%;
   }
 
 }

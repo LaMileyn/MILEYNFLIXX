@@ -12,9 +12,19 @@ const SelectionList : FC<ISelectionList> = ({ detailVideo }) => {
 
     return (
         <section className={s["selection-list"]}>
-            <div className={s['selection-list__headline']}><h2>Выбор редакции</h2></div>
+            <div className={s['selection-list__headline']}>
+                { detailVideo
+                    ? <h2>Выбор редакции</h2>
+                    : <h2>Жанры</h2>
+                }
+
+            </div>
             <div className={s['selection-list__slider']}>
-                <CategorysCardsSlider genreCard={false}/>
+                {
+                    detailVideo
+                        ? <CategorysCardsSlider genreCard={false}/>
+                        : <CategorysCardsSlider genreCard={true}/>
+                }
             </div>
             { detailVideo && (
                 <div className={s['selection-list__detail-video']}>

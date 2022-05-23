@@ -1,6 +1,7 @@
 import React, {FC, useState} from 'react';
 import s from './CategorysCardsSlider.module.scss';
 import FilmCard from "../FilmCard/FilmCard";
+import GenreCard from "../GenreCard/GenreCard";
 
 interface ICategorysCardsSlider {
     genreCard : boolean
@@ -16,7 +17,7 @@ const CategorysCardsSlider : FC<ICategorysCardsSlider> = ({genreCard}) => {
     const [clickCounter,setClicks] = useState<number>(0)
     // count of items in the slider ( now - only static )
     const itemsCount = 7
-    const widthCard =  genreCard ? 250 : 450
+    const widthCard =  genreCard ? 350 : 450
     // realization of slider translateX forward
     const handleForwardClick = () => {
         setRatio(Math.ceil( window.innerWidth / widthCard ));
@@ -47,27 +48,18 @@ const CategorysCardsSlider : FC<ICategorysCardsSlider> = ({genreCard}) => {
                 {/*<div className={s['list__item-card-genres']}>*/}
                 {/*    <FilmCard activeCard={false}/>*/}
                 {/*</div>*/}
-                <div className={s['list__item-card-films']}>
-                    <FilmCard activeCard={true}/>
-                </div>
-                <div className={s['list__item-card-films']}>
-                    <FilmCard activeCard={false}/>
-                </div>
-                <div className={s['list__item-card-films']}>
-                    <FilmCard activeCard={false}/>
-                </div>
-                <div className={s['list__item-card-films']}>
-                    <FilmCard activeCard={false}/>
-                </div>
-                <div className={s['list__item-card-films']}>
-                    <FilmCard activeCard={false}/>
-                </div>
-                <div className={s['list__item-card-films']}>
-                    <FilmCard activeCard={false}/>
-                </div>
-                <div className={s['list__item-card-films']}>
-                    <FilmCard activeCard={false}/>
-                </div>
+                { !genreCard
+                    ? [1,2,3,4,5,6,7].map( (element,index) =>(
+                        <div key={index} className={s['list__item-card-films']}>
+                            <FilmCard activeCard={false}/>
+                        </div>
+                    ) )
+                    : [1,2,3,4,5,6,7].map( (element,index) =>(
+                        <div key={index} className={s['list__item-card-genres']}>
+                            <GenreCard/>
+                        </div>
+                    ) )
+                }
             </div>
         </div>
     );

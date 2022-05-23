@@ -16,6 +16,7 @@
   --header-height: 115px;
 
 
+
   // App fonts
   --font-family-app: 'Roboto', sans-serif;
 
@@ -40,36 +41,27 @@
   --color-navigation-non-active-hover: rgba(255, 255, 255, 0.86);
   --color-navigation-active: #FFFFFF;
   --burder-menu-background: #292929;
+  --color-user-background: #303030;
 
 }
 
 :root[data-theme="light"] {
-
   // background App
   --app-background-color: #FFFFFF;
   // App text colors light theme
   --color-text-primary: #000000;
   --color-text-secondary: var(--color-grey-middle);
   --color-input-placeholder : var(--color-grey-middle);
-
-  // ------------- header navigation colors
-  --color-user-background: #efefef;
-
-
-
 }
 
 :root[data-theme="dark"] {
-
   // background App
   --app-background-color: #141414;
-
   // App text colors dark theme
   --color-text-primary: #FFFFFF;
   --color-text-secondary: rgba(229, 229, 229, 0.7);
   --color-input-placeholder : var(--color-grey-middle);
-  // ------------- header navigation colors
-  --color-user-background: #303030;
+
 
 }
 

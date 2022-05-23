@@ -4,10 +4,11 @@ import CloseIcon from "../../UI/Icons/CloseIcon";
 import TextContentVideoAbout from "../TextContentVideoAbout/TextContentVideoAbout";
 import cx from 'classnames'
 import TextContentVideoDetail from "../TextContentVideoDetail/TextContentVideoDetail";
+import LogoBig from "../../UI/Logos/LogoBig";
 
 const VideoDetailSlider: FC = (props) => {
 
-    const [currentSection,setCurrentSection] = useState<string>('О фильме')
+    const [currentSection, setCurrentSection] = useState<string>('О фильме')
 
     return (
         <div className={s['detail-slider']}>
@@ -17,22 +18,30 @@ const VideoDetailSlider: FC = (props) => {
                     muted
                     loop
                     autoPlay
-                    >
+                >
                     <source src="https://html5css.ru/howto/rain.mp4" type="video/mp4"/>
                 </video>
                 <div className={s['video-part__left-linear-gradient']}></div>
-                { currentSection === "Детали" && <div className={s['video-part__left-blur']}></div> }
+                {currentSection === "Детали" && <div className={s['video-part__left-blur']}></div>}
 
             </div>
 
             {/* content in the center*/}
 
             <div className={s['detail-slider__content']}>
-                {
-                    currentSection === "О фильме"
-                        ? <TextContentVideoAbout />
-                        : <TextContentVideoDetail />
-                }
+                <div className={s['content-wrapper']}>
+                    <div className={cx(s['details-content__logotype'])}>
+                        <div className={cx(s['logotype__wrapper'],{ [s['logotype__wrapper-small']] : currentSection === "Детали"})}>
+                            <LogoBig/>
+                        </div>
+                    </div>
+                    {
+                        currentSection === "О фильме"
+                            ? <TextContentVideoAbout/>
+                            : <TextContentVideoDetail/>
+                    }
+                </div>
+
 
             </div>
             {/* content in the center*/}
@@ -40,15 +49,17 @@ const VideoDetailSlider: FC = (props) => {
             {/* content in the center at the top*/}
             <div className={s['detail-slider__switch-details']}>
                 <button
-                    onClick={ () => setCurrentSection("О фильме")}
+                    onClick={() => setCurrentSection("О фильме")}
                     className={
-                        cx(s['switch-btn'],{ [s['switch-btn-active']] : currentSection === "О фильме" })
-                    }>О фильме</button>
+                        cx(s['switch-btn'], {[s['switch-btn-active']]: currentSection === "О фильме"})
+                    }>О фильме
+                </button>
                 <button
-                    onClick={ () => setCurrentSection("Детали")}
+                    onClick={() => setCurrentSection("Детали")}
                     className={
-                    cx(s['switch-btn'],{ [s['switch-btn-active']] : currentSection === "Детали" })
-                }>Детали</button>
+                        cx(s['switch-btn'], {[s['switch-btn-active']]: currentSection === "Детали"})
+                    }>Детали
+                </button>
             </div>
             {/* content in the center at the top*/}
 

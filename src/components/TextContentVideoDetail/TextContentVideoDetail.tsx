@@ -6,11 +6,11 @@ import LogoBig from "../../UI/Logos/LogoBig";
 const TextContentVideoDetail: FC = (props) => {
     return (
         <div className={s['details-content-wrapper']}>
-            <div className={s['details-content__logotype']}>
-                <div className={s['logotype__wrapper']}>
-                    <LogoBig/>
-                </div>
-            </div>
+            {/*<div className={s['details-content__logotype']}>*/}
+            {/*    <div className={s['logotype__wrapper']}>*/}
+            {/*        <LogoBig/>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             {/*    ------------------------------------------    */}
             <div className={s['details-content-text']}>
                 <div className={s['content-text__left-part']}>

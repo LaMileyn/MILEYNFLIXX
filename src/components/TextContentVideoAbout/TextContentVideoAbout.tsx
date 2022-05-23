@@ -7,11 +7,11 @@ import VideoScreenButtons from "../VideoScreenButtons/VideoScreenButtons";
 const TextContentVideoAbout: FC = (props) => {
     return (
         <div className={s['text-content-wrapper']}>
-            <div className={s['text-content__logotype']}>
-                <div className={s['logotype__wrapper']}>
-                    <LogoBig/>
-                </div>
-            </div>
+            {/*<div className={s['text-content__logotype']}>*/}
+            {/*    <div className={s['logotype__wrapper']}>*/}
+            {/*        <LogoBig/>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             {/*    ----------------------------    */}
             <div className={s['text-content__meta']}>
                 <div className={s['meta__base']}>
@@ -41,13 +41,7 @@ const TextContentVideoAbout: FC = (props) => {
             </div>
             <div className={s['text-content__description']}>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam atque, aut culpa dolore
-                    dolorem eveniet ipsum natus non perspiciatis quo quod quos sed. Corporis dolores esse explicabo
-                    facilis impedit odio quisquam, quo repellat tempore. Cupiditate doloremque ipsam ipsum laboriosam
-                    obcaecati, quod ratione sapiente sint unde velit. A accusantium animi, architecto aspernatur autem
-                    beatae consequatur consequuntur corporis debitis dicta dolore ducimus ea, eaque eligendi ex
-                    exercitationem facere fuga id iure labore maxime molestias nemo numquam optio pariatur placeat
-                    quaerat quis quo ratione repellat reprehenderit rerum sint temporibus velit voluptas, voluptatem
-                    voluptatibus. Alias ducimus ex necessitatibus nulla numquam quaerat quam rem?</p>
+                    dolorem eveniet ipsum natus non perspiciatis quo quod quos sed.</p>
             </div>
             <div className={s['text-content__buttons']}>
                 <VideoScreenButtons/>
